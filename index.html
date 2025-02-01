@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="val.css">
+  <link rel="stylesheet" href="trans.js">
+  <link rel="stylesheet" href="const.js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>an important question</title>
+    <link rel="stylesheet" href="val.css" />
+    <link rel="shortcut icon" href="kiss-love.gif" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Can i be your valentine?</h1>
+      <button id="yesButton">yes~</button>
+      <button id="noButton">no</button>
+      <h2 id="responseMessage"></h2>
+      <br />
+      <h6>created by svetleto</h6>
+    </div>
+    <script src="./js/trans.js"></script>
+    <script src="./js/const.js"></script>
+    <script>
+      const noButton = document.getElementById('noButton');
+      const responseMessage = document.getElementById('responseMessage');
+      const phrases = [
+      "no",
+      "are you sure?",
+      "what if I asked really nicely?",
+      "pretty please~",
+      "with an espresso martini?",
+      "what about a tiramisu?",
+      "PLEASE, YOUR GRACE!",
+      "but :*(",
+      "i am going to die",
+      "yep, im dead",
+      "please, darling",
+      ":((((",
+      "PRETTY PLEASE",
+      "...",
+      "no :(",
+      ];
+
+      yesButton.addEventListener('click', () => {
+        window.location.href = 'yes.html';
+      });
+
+      noButton.addEventListener('click', () => {
+        const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+        responseMessage.textContent = randomPhrase;
+      });
+    </script>
+  </body>
+</html>
